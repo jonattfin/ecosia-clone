@@ -19,7 +19,7 @@ export default () => (
           <Input placeholder="Search the web to plant trees..." />
           <InputGroupAddon addonType="append">
             <InputGroupText>
-              <FontAwesomeIcon icon={faSearch} color='goldenrod'></FontAwesomeIcon>
+              <FontAwesomeIcon icon={faSearch} color='goldenrod' onClick={() => console.log('hello')} ></FontAwesomeIcon>
             </InputGroupText>
           </InputGroupAddon>
         </InputGroup>
