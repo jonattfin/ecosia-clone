@@ -1,0 +1,85 @@
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+
+  // background-color: goldenrod;
+  height: 100vh;
+}
+
+.savanaContainer {
+  width: 100vw;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  img {
+    margin-right: 5vw;
+  }
+}
+
+.womanWithCropsContainer {
+  width: 20vw;
+  border-radius: 50%;
+}
+
+.worldMapImageContainer {
+  width: 40vw;
+}
+
+.textWidth {
+  width: 30vw;
+}
+
+.womenWithSeedsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  background-image: url('./images/women-with-seeds.jpg')
+}
+
+.womanTextcontainer {
+  width: 30vw;
+}
+
+.specialSeparator {
+  width: 40vw;
+}
+
+.logoImageContainer {
+  width: 150px;
+}
+
+.betterInternet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 200px;
+  }
+}
+
+.cardContainer {
+  padding: 20px;
+  width: 400px;
+}
+
+.footer {
+  
+}

@@ -1,0 +1,13 @@
+.appWrapper {
+  display: flex;
+  justify-content: right;
+
+  padding: 20px 50px;
+}
+
+.menuWrapper {
+  display: flex;
+  width: 100px;
+  justify-content: space-around;
+  align-items: center;
+}
