@@ -57,6 +57,10 @@
 
   .card {
     width: 24vw;
+
+    &--centered {
+      text-align: center
+    }
   }
 
   .internet {
@@ -66,6 +70,10 @@
     img {
       height: 200px;
     }
+  }
+
+  .button {
+    margin: 10px;
   }
 }
 

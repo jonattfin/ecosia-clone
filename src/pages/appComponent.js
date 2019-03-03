@@ -41,8 +41,8 @@ class CustomDropDown extends React.Component {
           <FontAwesomeIcon icon={faBars} color="goldenrod" />
         </DropdownToggle>
         <DropdownMenu>
-          {pages.map(page => (
-            <Route render={({ history }) => (
+          {pages.map((page, index) => (
+            <Route key={`route_${index}`} render={({ history }) => (
               <DropdownItem onClick={this.onClick(page.url, history)}>{page.description}</DropdownItem>
             )} />
           ))}

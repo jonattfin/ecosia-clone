@@ -4,6 +4,6 @@ const getPayload = (state) => state.home;
 
 export const getModel = createSelector([getPayload], (payload) => {
   return {
-    payload: {}
+    payload
   };
 });
