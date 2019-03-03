@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import AppComponent from './AppComponent';
+import AppComponent from './appComponent';
 import { getModel } from './selectors';
 
 class AppContainer extends Component {

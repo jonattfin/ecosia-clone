@@ -1,3 +1,3 @@
-import { default as MainApp } from './AppContainer';
+import { default as MainApp } from './appContainer';
 
 export default MainApp;

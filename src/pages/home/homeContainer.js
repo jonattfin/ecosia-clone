@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import HomeComponent from './HomeComponent';
-import * as duckActions from './HomeDuck';
+import HomeComponent from './homeComponent';
+import * as duckActions from './homeDuck';
 import { getModel } from './selectors';
 
 class HomeContainer extends Component {

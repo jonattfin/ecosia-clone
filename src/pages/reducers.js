@@ -1,1 +1,1 @@
-export { default as homeReducer } from './home/HomeDuck';
+export { default as homeReducer } from './home/homeDuck';
