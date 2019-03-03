@@ -10,7 +10,7 @@ import { faBell, faBars } from '@fortawesome/free-solid-svg-icons'
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 // import logo from './logo.svg';
-import styles from './index.module.scss';
+import './styles.scss';
 
 const Home = lazy(() => import('./home'));
 
@@ -42,9 +42,9 @@ class CustomDropDown extends React.Component {
 
 export default () => (
   <Router>
-    <div>
-      <div className={styles.appWrapper}>
-        <div className={styles.menuWrapper}>
+    <div className="app">
+      <div className="content">
+        <div className="menu">
           <div>
             <FontAwesomeIcon icon={faBell} color="goldenrod" /> <Badge color="info">4</Badge>
           </div>

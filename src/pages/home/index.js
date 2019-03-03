@@ -6,15 +6,15 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-import styles from './index.module.scss';
+import './styles.scss';
 import images from './images';
 import Counter from './components/counter';
 
 export default () => (
-  <div>
-    <section className={styles.mainSection}>
-      <img className={styles.logoContainer} src={images.LogoImage} alt="logo"></img>
-      <div className={styles.searchContainer}>
+  <div className="home">
+    <section className="section">
+      <img className="logo" src={images.LogoImage} alt="logo"></img>
+      <div className="search">
         <InputGroup>
           <Input placeholder="Search the web to plant trees..." />
           <InputGroupAddon addonType="append">
@@ -26,12 +26,13 @@ export default () => (
       </div>
 
       <Counter />
-      <img className={styles.savanahImageContainer} src={images.SavanahImage} alt="nice view from the window" />
+
+      <img className="savanah" src={images.SavanahImage} alt="nice view from the window" />
     </section>
-    <section className={styles.mainSection}>
-      <div className={styles.textContainer}>
-        <img className={styles.womanWithCropsContainer} src={images.WomanWithCropsImage} alt="woman with crops" />
-        <div className={styles.textWidth}>
+    <section className="section">
+      <div className="text">
+        <img className="womanWithCrops" src={images.WomanWithCropsImage} alt="woman with crops" />
+        <div className="text--max-width">
           <h2>
             You search the web, we plant trees
           </h2>
@@ -43,8 +44,8 @@ export default () => (
           </div>
         </div>
       </div>
-      <div className={styles.textContainer}>
-        <div className={styles.textWidth}>
+      <div className="text">
+        <div className="text--max-width">
           <h2>
             We plant trees where they’re needed most
           </h2>
@@ -52,11 +53,11 @@ export default () => (
             Our trees benefit people, the environment and local economies.
           </h4>
         </div>
-        <img className={styles.worldMapImageContainer} src={images.WorldMapImage} alt="woman with crops" />
+        <img className="worldMap" src={images.WorldMapImage} alt="woman with crops" />
       </div>
     </section>
-    <section className={styles.mainSectionWithSeeds}>
-      <div className={styles.womanTextcontainer}>
+    <section className="sectionWithSeeds">
+      <div className={"text--max-width"}>
         <h2>
           "We plant native acacia trees, because they make the soil more fertile. With our earnings we started a communal savings account for women to borrow and start their own businesses."
       </h2>
@@ -66,12 +67,12 @@ export default () => (
           Mechisho, Ethiopia
       </h4>
       </div>
-      <div className={styles.specialSeparator}>&nbsp;</div>
+      <div className="separator">&nbsp;</div>
     </section>
-    <section className={styles.mainSection}>
+    <section className="section">
       <h1>We stand for a better internet</h1>
-      <div className={styles.betterInternet}>
-        <div className={styles.cardContainer}>
+      <div className="internet">
+        <div className="card">
           <Card>
             <CardImg top src={images.TransparencyImage} alt="Card image cap" />
             <CardBody>
@@ -80,7 +81,7 @@ export default () => (
             </CardBody>
           </Card>
         </div>
-        <div className={styles.cardContainer}>
+        <div className="card">
           <Card>
             <CardImg top src={images.CoNeutralImage} alt="Card image cap" />
             <CardBody>
@@ -89,7 +90,7 @@ export default () => (
             </CardBody>
           </Card>
         </div>
-        <div className={styles.cardContainer}>
+        <div className="card">
           <Card>
             <CardImg top src={images.PrivacyImage} alt="Card image cap" />
             <CardBody>

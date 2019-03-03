@@ -1,0 +1,15 @@
+.app {
+  .content {
+    display: flex;
+    justify-content: right;
+
+    padding: 20px 50px;
+  }
+
+  .menu {
+    display: flex;
+    width: 100px;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

@@ -1,0 +1,71 @@
+%baseContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.home {
+  .section {
+    @extend %baseContainer;
+
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .sectionWithSeeds {
+    @extend %baseContainer;
+  
+    color: white;
+    background-image: url('./images/women-with-seeds.jpg');
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .search, .separator, .worldMap {
+    width: 40vw;
+  }
+
+  .text {
+    @extend %baseContainer;
+
+    flex-direction: row;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    img {
+      margin-right: 5vw;
+    }
+    
+    &--max-width {
+      width: 30vw;
+    }
+  }
+
+  .savanah {
+    width: 100vw;
+  }
+
+  .womanWithCrops {
+    width: 20vw;
+    border-radius: 50%;
+  }
+
+  .card {
+    width: 24vw;
+  }
+
+  .internet {
+    display: flex;
+    justify-content: space-around;
+
+    img {
+      height: 200px;
+    }
+  }
+}
+

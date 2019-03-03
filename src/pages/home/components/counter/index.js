@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './index.module.scss';
+import './styles.scss';
 
 export default class Counter extends React.Component {
   state = { counter: 100000 }
@@ -13,8 +13,8 @@ export default class Counter extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1 className={styles.textWrapper}>
+      <div className="counter">
+        <h1 className="counter__text">
           {this.state.counter}
         </h1>
         <div>
