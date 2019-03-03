@@ -40,13 +40,13 @@ class CustomDropDown extends React.Component {
   }
 }
 
-export default () => (
+export default (props) => (
   <Router>
     <div className="app">
       <div className="content">
         <div className="menu">
           <div>
-            <FontAwesomeIcon icon={faBell} color="goldenrod" /> <Badge color="info">4</Badge>
+            <FontAwesomeIcon icon={faBell} color="goldenrod" /> <Badge color="info">{props.model.numberOfSearches}</Badge>
           </div>
           <CustomDropDown />
         </div>

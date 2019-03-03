@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import './styles.scss';
 import 'bootstrap/scss/bootstrap.scss';
 
-import App from './pages/app';
+import App from './pages';
 import * as serviceWorker from './serviceWorker';
 import store from './store';
 
