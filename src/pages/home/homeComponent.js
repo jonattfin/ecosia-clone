@@ -5,11 +5,11 @@ import {
 } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faCaretDown } from '@fortawesome/free-solid-svg-icons'
-import { faFacebook, faInstagram, faYoutube, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 import './styles.scss';
 import images from './images';
 import Counter from './components/counter';
+import { Footer } from '../components';
 
 export default (props) => {
   const [query, setQuery] = useState(0);
@@ -38,10 +38,11 @@ export default (props) => {
         </div>
         {payload.data.length > 0 && JSON.stringify(payload.data)}
         <Counter />
-        <a href="#womanWithCrops">
-          <Button color="info" > <FontAwesomeIcon icon={faCaretDown} /> </Button>
-        </a>
-
+        <div className="caret">
+          <a href="#womanWithCrops">
+            <Button color="info" > <FontAwesomeIcon icon={faCaretDown} /> </Button>
+          </a>
+        </div>
         <img className="savanah" src={images.SavanahImage} alt="nice view from the window" />
       </section>
       <section id="womanWithCrops" className="section">
@@ -84,7 +85,7 @@ export default (props) => {
         </div>
         <div className="separator">&nbsp;</div>
       </section>
-      <section className="section">
+      <section className="section section-internet">
         <h2>We stand for a better internet</h2>
         <div className="internet">
           <div className="card">
@@ -121,16 +122,10 @@ export default (props) => {
         <div>
           Follow our journey
       </div>
-        <div>
-          {getIcons().map((icon, index) => (
-            <Button key={`button_${index}`} className="button" color="info"><FontAwesomeIcon icon={icon}></FontAwesomeIcon></Button>
-          ))}
-        </div>
+        <Footer />
       </section>
     </div >
   )
 }
 
-function getIcons() {
-  return [faFacebook, faTwitter, faYoutube, faInstagram, faLinkedin];
-}
+

@@ -11,6 +11,10 @@ export default class Counter extends React.Component {
     }, 1000);
   }
 
+  componentWillUnmount() {
+    clearInterval(this.intervalId);
+  }
+
   render() {
     return (
       <div className="counter">

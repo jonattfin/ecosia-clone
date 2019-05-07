@@ -72,6 +72,24 @@
     }
   }
 
+  @media only screen and (max-width: 600px) {
+    .section-internet, .sectionWithSeeds {
+      display: none;
+    }
+
+    .search {
+      width: 80vw;
+    }
+
+    #womanWithCrops {
+      display: none;
+    }
+
+    .caret {
+      display: none;
+    }
+  }
+
   .button {
     margin: 10px;
   }
