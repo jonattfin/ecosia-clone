@@ -31,7 +31,7 @@ export default (props) => {
             <InputGroupAddon addonType="append">
               <InputGroupText>
                 {payload.searchInProgress && <Spinner size="sm" color="info" />}
-                {!payload.searchInProgress && <FontAwesomeIcon icon={faSearch} color='goldenrod' onClick={() => props.actions.search(query)} ></FontAwesomeIcon>}
+                {!payload.searchInProgress && <FontAwesomeIcon icon={faSearch} color='goldenrod' onClick={() => actions.search(query)} ></FontAwesomeIcon>}
               </InputGroupText>
             </InputGroupAddon>
           </InputGroup>
