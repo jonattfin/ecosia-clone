@@ -3,17 +3,20 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faYoutube, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
-import {
-  Button
-} from 'reactstrap';
+import { Button } from "@blueprintjs/core";
 
-import './styles.scss';
+import styles from './styles.module.scss';
 
 export default () => (
   <div>
-    {getIcons().map((icon, index) => (
-      <Button key={`button_${index}`} className="button" color="info"><FontAwesomeIcon icon={icon}></FontAwesomeIcon></Button>
-    ))}
+    <div>
+      Follow our journey
+    </div>
+    <div>
+      {getIcons().map((icon, index) => (
+        <Button key={`button_${index}`} className={styles.button} intent="primary"><FontAwesomeIcon icon={icon}></FontAwesomeIcon></Button>
+      ))}
+    </div>
   </div>
 )
 

@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from 'reactstrap';
 import _ from 'lodash';
 import { Form, FormGroup, Input } from 'reactstrap';
-import { Footer } from '../components';
+// import { Footer } from '../components';
 
 import './styles.scss';
 import images from './images';
@@ -149,7 +149,7 @@ export default () => (
       </div>
       <div className="footer__line">&nbsp;</div>
       <div>&nbsp;</div>
-      <Footer/>
+      {/* <Footer/> */}
     </section>
   </div>
 );

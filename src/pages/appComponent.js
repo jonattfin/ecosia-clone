@@ -55,14 +55,14 @@ class CustomDropDown extends React.Component {
 export default (props) => (
   <Router>
     <div className="app">
-      <div className="content">
+      {/* <div className="content">
         <div className="menu">
           <div>
             <FontAwesomeIcon icon={faTree} color="green" /> <Badge color="info">{props.model.numberOfSearches}</Badge>
           </div>
           <CustomDropDown />
         </div>
-      </div>
+      </div> */}
 
       <Suspense fallback={<div>Loading...</div>}>
         <Switch>
