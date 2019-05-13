@@ -8,23 +8,11 @@ import { getModel } from './selectors';
 
 class HomeContainer extends Component {
   render() {
-    return <HomeComponent {...this.props}/>
-  } 
+    return <HomeComponent {...this.props} />
+  }
 }
 
-function mapStateToProps(state) {
-  return {
-    model: getModel(state)
-  };
-}
+const mapStateToProps = state => ({ model: getModel(state) });
+const mapDispatchToProps = dispatch => ({ actions: bindActionCreators(duckActions, dispatch) });
 
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(duckActions, dispatch),
-  };
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(HomeContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer);

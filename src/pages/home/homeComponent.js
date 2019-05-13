@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { InputGroup, Button } from "@blueprintjs/core";
+import { InputGroup, Button, Spinner, Intent } from "@blueprintjs/core";
+import { IconNames } from "@blueprintjs/icons";
 
 import { Footer } from '../../components'
 
@@ -7,12 +8,12 @@ import { Counter } from './components';
 import images from './images';
 import styles from './styles.module.scss';
 
-
 export default (props) => {
-  const [query, setQuery] = useState(0);
+  const [query, setQuery] = useState('');
 
   const { actions, model } = props;
   const { payload } = model;
+  const { data, searchInProgress } = payload;
 
   return (
     <div className={styles.home}>
@@ -21,12 +22,21 @@ export default (props) => {
           <img className={styles.logo} src={images.logoImage} alt="logo" />
         </div>
         <div className={styles.counter}>
-          <InputGroup className={styles.searchBox} placeholder="Search the web to plant trees..." large />
+          <InputGroup
+            className={styles.searchBox}
+            placeholder="Search the web to plant trees..."
+            large
+            leftIcon={IconNames.SEARCH}
+            onChange={(ev) => { setQuery(ev.target.value); }}
+            onKeyDown={(ev) => { if (ev.keyCode === 13) { actions.search(query); } }}
+          />
           <div>&nbsp;</div>
+          {searchInProgress && <Spinner intent={Intent.PRIMARY} size={Spinner.SIZE_SMALL} />}
           <div className={styles.counter__wrapper}>
+            {data}
             <Counter />
             <div>&nbsp;</div>
-            <Button icon={'arrow-down'} intent="primary" large />
+            <Button icon={IconNames.ARROW_DOWN} intent={Intent.PRIMARY} large />
           </div>
         </div>
         <div>
@@ -41,5 +51,3 @@ export default (props) => {
     </div >
   )
 }
-
-

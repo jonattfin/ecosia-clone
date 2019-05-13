@@ -7,15 +7,20 @@ import {
   MenuItem,
   Tag,
 } from "@blueprintjs/core";
+import {
+  Route,
+} from 'react-router-dom'
 
 import styles from './styles.module.scss';
+
+const menu = createMenu();
 
 export default ({ model = {} }) => (
   <div className={styles.header}>
     <Tag className={styles.tree} icon={'tree'} round>
-      {model.numberOfSearches}
+      {model.payload.numberOfSearches}
     </Tag>
-    <Popover content={createMenu()} position={Position.BOTTOM_LEFT}>
+    <Popover content={menu} position={Position.BOTTOM_LEFT}>
       <Button icon="menu" />
     </Popover>
   </div>
@@ -29,39 +34,16 @@ function createMenu() {
     { url: '/settings', text: 'Settings', icon: 'cog' },
   ];
 
+  const onClick = (history, url) => () => history.push(url);
+
   return (
     <Menu>
-      {pages.map(({ icon, text }, index) => <MenuItem key={`menuItem_${index}`} icon={icon} text={text} />)}
+      <Route render={({ history }) => (
+        <React.Fragment>
+          {pages.map(({ icon, text, url }, index) => <MenuItem key={`menuItem_${index}`} icon={icon} text={text} onClick={onClick(history, url)} />)}
+        </React.Fragment>
+      )}>
+      </Route>
     </Menu>
   );
 }
-
-// class CustomDropDown extends React.Component {
-//   state = { dropdownOpen: false }
-
-//   toggle = () => {
-//     this.setState({ dropdownOpen: !this.state.dropdownOpen });
-//   }
-
-//   onClick = (url, history) => () => {
-//     history.push(url);
-//   }
-
-//   render() {
-//     return (
-//       <div></div>
-//       <Dropdown direction="left" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-//         <DropdownToggle>
-//           <FontAwesomeIcon icon={faBars} color="goldenrod" />
-//         </DropdownToggle>
-//         <DropdownMenu>
-//           {pages.map((page, index) => (
-//             <Route key={`route_${index}`} render={({ history }) => (
-//               <DropdownItem onClick={this.onClick(page.url, history)}>{page.description}</DropdownItem>
-//             )} />
-//           ))}
-//         </DropdownMenu>
-//       </Dropdown>
-//     );
-//   }
-// }
