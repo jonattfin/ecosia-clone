@@ -90,7 +90,7 @@ export default (props) => {
             <div className={styles.card_separator}>
               <Card interactive={true} elevation={Elevation.TWO}>
                 <img className={styles.card_image} src={card.image} alt="logo" />
-                <h4><a href="#">{card.title}</a></h4>
+                <h4>{card.title}</h4>
                 <p>{card.content}</p>
               </Card>
             </div>
