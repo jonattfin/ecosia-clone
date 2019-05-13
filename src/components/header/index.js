@@ -28,10 +28,10 @@ export default ({ model = {} }) => (
 
 function createMenu() {
   const pages = [
-    { url: '/aboutUs', text: 'About us', icon: 'map' },
-    { url: '/howItWorks', text: 'How Ecosia works', icon: "th", },
-    { url: '/mobile', text: 'Mobile app', icon: 'zoom-to-fit' },
-    { url: '/settings', text: 'Settings', icon: 'cog' },
+    { url: '/how-it-works', text: 'How Ecosia works', icon: "build", },
+    { url: '/aboutUs', text: 'About us', icon: 'help' },
+    { url: '/mobile', text: 'Mobile app', icon: 'mobile-phone' },
+    { url: '/privacy', text: 'Privacy', icon: 'shield' },
   ];
 
   const onClick = (history, url) => () => history.push(url);

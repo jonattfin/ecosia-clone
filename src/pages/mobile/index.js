@@ -8,7 +8,7 @@ import images from './images';
 
 export default () => {
 
-  const { phone, setPhone } = useState('');
+  const { setPhone } = useState('');
 
   return (
     <div className={styles.mobile}>

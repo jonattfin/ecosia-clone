@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 
 export default class Counter extends React.Component {
-  state = { counter: 100000 * 50 }
+  state = { counter: 1000000 * 50 }
 
   componentDidMount() {
     this.intervalId = setInterval(() => {
