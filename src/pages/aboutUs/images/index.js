@@ -1,11 +1,11 @@
 import savanahImage from './savanah.png'
-import BCorporationImage from './b-corporation.png'
-import AppStoreImage from './app-store-en.svg'
-import PlayStoreImage from './play-store-en.svg'
+import corporationImage from './b-corporation.png'
+import appStoreImage from './app-store-en.svg'
+import playStoreImage from './play-store-en.svg'
 
 export default {
   savanahImage,
-  BCorporationImage,
-  AppStoreImage,
-  PlayStoreImage,
+  corporationImage,
+  appStoreImage,
+  playStoreImage,
 }
