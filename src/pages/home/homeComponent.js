@@ -3,9 +3,9 @@ import { InputGroup, Button } from "@blueprintjs/core";
 
 import { Footer } from '../../components'
 
-import styles from './styles.module.scss';
-import images from './images';
 import { Counter } from './components';
+import images from './images';
+import styles from './styles.module.scss';
 
 
 export default (props) => {
