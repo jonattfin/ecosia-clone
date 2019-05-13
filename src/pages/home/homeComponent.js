@@ -100,7 +100,7 @@ export default (props) => {
           <Button icon={IconNames.ADD} intent={Intent.PRIMARY} large text={'Add Ecosia to Firefox'} />
         </div>
       </section>
-      <section className={styles.footer}>
+      <section>
         <Footer />
       </section>
     </div >

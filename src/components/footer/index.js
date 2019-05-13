@@ -7,7 +7,7 @@ import { Button, Intent } from "@blueprintjs/core";
 import styles from './styles.module.scss';
 
 export default () => (
-  <div>
+  <div className={styles.footer}>
     <div>
       Follow our journey
     </div>

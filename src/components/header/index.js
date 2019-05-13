@@ -30,7 +30,7 @@ function createMenu() {
   const pages = [
     { url: '/aboutUs', text: 'About us', icon: 'map' },
     { url: '/howItWorks', text: 'How Ecosia works', icon: "th", },
-    { url: '/mobileApp', text: 'Mobile app', icon: 'zoom-to-fit' },
+    { url: '/mobile', text: 'Mobile app', icon: 'zoom-to-fit' },
     { url: '/settings', text: 'Settings', icon: 'cog' },
   ];
 

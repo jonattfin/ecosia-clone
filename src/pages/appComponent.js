@@ -11,6 +11,7 @@ import styles from './styles.module.scss';
 
 const Home = lazy(() => import('./home'));
 const AboutUs = lazy(() => import('./aboutUs'));
+const Mobile = lazy(() => import('./mobile'));
 
 export default (props) => (
   <Router>
@@ -21,6 +22,7 @@ export default (props) => (
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/aboutUs" component={AboutUs} />
+          <Route exact path="/mobile" component={Mobile} />
         </Switch>
       </Suspense>
     </div>
