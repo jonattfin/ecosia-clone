@@ -1,17 +1,17 @@
 import logoImage from './logo.png';
 import savanahImage from './savanah.png'
-import WomanWithCropsImage from './woman-with-crops.jpg'
-import WorldMapImage from './world-map.png'
-import TransparencyImage from './transparency.png';
-import CoNeutralImage from './co2-neutral.png';
-import PrivacyImage from './privacy-friendly.png';
+import womanWithCropsImage from './woman-with-crops.jpg'
+import worldMapImage from './world-map.png'
+import transparencyImage from './transparency.png';
+import coNeutralImage from './co2-neutral.png';
+import privacyImage from './privacy-friendly.png';
 
 export default {
   logoImage,
   savanahImage,
-  WomanWithCropsImage,
-  WorldMapImage,
-  TransparencyImage,
-  CoNeutralImage,
-  PrivacyImage
+  womanWithCropsImage,
+  worldMapImage,
+  transparencyImage,
+  coNeutralImage,
+  privacyImage
 }

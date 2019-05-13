@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { InputGroup, Button, Spinner, Intent } from "@blueprintjs/core";
+import { InputGroup, Button, Spinner, Intent, Card, Elevation } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 
 import { Footer } from '../../components'
@@ -17,7 +17,7 @@ export default (props) => {
 
   return (
     <div className={styles.home}>
-      <section className={styles.screen}>
+      <section className={styles.first_screen}>
         <div>
           <img className={styles.logo} src={images.logoImage} alt="logo" />
         </div>
@@ -36,7 +36,9 @@ export default (props) => {
             {data}
             <Counter />
             <div>&nbsp;</div>
-            <Button icon={IconNames.ARROW_DOWN} intent={Intent.PRIMARY} large />
+            <a href="#woman-with-crops">
+              <Button icon={IconNames.ARROW_DOWN} intent={Intent.PRIMARY} large />
+            </a>
           </div>
         </div>
         <div>
@@ -45,9 +47,85 @@ export default (props) => {
           <img className={styles.savanah} src={images.savanahImage} alt="savanah" />
         </div>
       </section>
+      <section className={styles.second_screen} id="woman-with-crops">
+        <div className={styles.row}>
+          <div>
+            <img className={styles.withCrops} src={images.womanWithCropsImage} alt="woman with crops" />
+          </div>
+          <div className={styles.column}>
+            <div className={styles.title}>
+              You search the web, <br />
+              we plant trees
+            </div>
+            <div className={styles.body}>
+              Ecosia is like any other search engine, with one major difference:<br />
+              <b>we use our profits to plant trees.</b>
+            </div>
+            <div>&nbsp;</div>
+            <div>
+              <Button icon={IconNames.ADD} intent={Intent.PRIMARY} large text={'Add Ecosia to Firefox'} />
+            </div>
+          </div>
+        </div>
+        <div className={styles.row}>
+          <div className={styles.column}>
+            <div className={styles.title}>
+              We plant trees where <br /> they’re needed most
+            </div>
+            <div className={styles.body}>
+              Our trees benefit people, the environment <br /> and local economies.
+            </div>
+          </div>
+          <div>
+            <img className={styles.worldMap} src={images.worldMapImage} alt="world map" />
+          </div>
+        </div>
+      </section>
+      <section className={styles.third_screen}>
+        <div className={styles.title}>
+          We stand for a better internet
+        </div>
+        <div className={styles.cards}>
+          {getCards().map(card => (
+            <div className={styles.card_separator}>
+              <Card interactive={true} elevation={Elevation.TWO}>
+                <img className={styles.card_image} src={card.image} alt="logo" />
+                <h4><a href="#">{card.title}</a></h4>
+                <p>{card.content}</p>
+              </Card>
+            </div>
+          ))}
+        </div>
+        <div>
+          <Button icon={IconNames.ADD} intent={Intent.PRIMARY} large text={'Add Ecosia to Firefox'} />
+        </div>
+      </section>
       <section className={styles.footer}>
         <Footer />
       </section>
     </div >
   )
+}
+
+function getCards() {
+  return [
+    {
+      url: '',
+      title: 'Completely transparent',
+      content: 'We publish our monthly financial reports, so you see exactly where the income from your searches goes.',
+      image: images.transparencyImage
+    },
+    {
+      url: '',
+      title: 'More than Co2 neutral',
+      content: 'Our servers run on 100% renewable energy, and every search request removes 1kg of CO from the atmosphere.',
+      image: images.coNeutralImage
+    },
+    {
+      url: '',
+      title: 'Privacy friendly',
+      content: 'We don’t sell your data to advertisers, have no third party trackers and anonymize all searches within one week.',
+      image: images.privacyImage
+    },
+  ]
 }

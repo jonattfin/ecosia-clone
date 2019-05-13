@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 
 export default class Counter extends React.Component {
-  state = { counter: 100000 }
+  state = { counter: 100000 * 50 }
 
   componentDidMount() {
     this.intervalId = setInterval(() => {
@@ -19,7 +19,7 @@ export default class Counter extends React.Component {
     return (
       <div className={styles.counter}>
         <h1 className={styles.counter__text}>
-          {this.state.counter}
+          {this.state.counter.toLocaleString()}
         </h1>
         <div>
           Trees planted by Ecosia users
@@ -28,3 +28,4 @@ export default class Counter extends React.Component {
     );
   }
 }
+
