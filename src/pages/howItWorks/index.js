@@ -71,6 +71,9 @@ export default () => {
             <Button intent={Intent.PRIMARY} large text={'Get updates'} onClick={() => alert(email)} />
           </ControlGroup>
         </div>
+        <div>
+          <img className={styles.savanah_image} src={images.savanahImage} alt={'savanah'} />
+        </div>
       </section>
       <section>
         <Links />

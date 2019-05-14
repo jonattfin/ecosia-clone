@@ -7,6 +7,7 @@ import forbesImage from './forbes.svg';
 import ecosiaImage from './ecosia.svg';
 import adsImage from './ads.svg';
 import incomeImage from './income.svg';
+import savanahImage from './savanah.png'
 
 export default {
   backgroundImage,
@@ -17,5 +18,6 @@ export default {
   forbesImage,
   ecosiaImage,
   adsImage,
-  incomeImage
+  incomeImage,
+  savanahImage,
 }
