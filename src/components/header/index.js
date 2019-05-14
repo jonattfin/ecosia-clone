@@ -11,21 +11,16 @@ import {
   Route,
 } from 'react-router-dom'
 
-import images from './images';
 import styles from './styles.module.scss';
 
 const menu = createMenu();
 
 export default ({ model = ({ payload: {} }), }) => {
-  let showTrees = typeof window !== undefined && window.location.pathname === '/';
-
   return (
     <div className={styles.header}>
-      {showTrees && (
-        <Tag className={styles.tree} icon={'tree'} round>
-          {model.payload.numberOfSearches}
-        </Tag>
-      )}
+      <Tag className={styles.tree} icon={'tree'} round>
+        {model.payload.numberOfSearches}
+      </Tag>
       <Popover content={menu} position={Position.BOTTOM_LEFT}>
         <Button icon="menu" />
       </Popover>

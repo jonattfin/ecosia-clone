@@ -85,8 +85,8 @@ export default (props) => {
           We stand for a better internet
         </div>
         <div className={styles.cards}>
-          {getCards().map(card => (
-            <div className={styles.card_separator}>
+          {getCards().map((card, index) => (
+            <div className={styles.card_separator} key={`card_${index}`}>
               <Card interactive={true} elevation={Elevation.TWO}>
                 <img className={styles.card_image} src={card.image} alt="logo" />
                 <h4>{card.title}</h4>
