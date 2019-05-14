@@ -7,8 +7,7 @@ import styles from './styles.module.scss';
 import images from './images';
 
 export default () => {
-
-  const { setPhone } = useState('');
+  const [setPhone] = useState('');
 
   return (
     <div className={styles.mobile}>

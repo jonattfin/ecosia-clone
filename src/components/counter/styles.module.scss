@@ -1,9 +1,8 @@
-@import '../../../../globals';
+@import '../../globals';
 
 .counter {
   &__text {
     color: $primary-color;
-    font-size: 2.5em;
   }
 }
 

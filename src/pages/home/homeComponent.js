@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { InputGroup, Button, Spinner, Intent, Card, Elevation } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
 
-import { Footer } from '../../components'
+import { Footer, Counter } from '../../components'
 
-import { Counter } from './components';
 import images from './images';
 import styles from './styles.module.scss';
 

@@ -33,7 +33,6 @@ export default () => {
             </div>
           ))}
         </div>
-        <div></div>
       </section>
       <section className={styles.meet_the_team_screen}>
         <div className={styles.title}>Meet the team</div>

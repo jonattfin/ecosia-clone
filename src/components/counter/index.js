@@ -16,15 +16,21 @@ export default class Counter extends React.Component {
   }
 
   render() {
+    const { showText = true, fontSize = '2.5em' } = this.props;
+
     return (
       <div className={styles.counter}>
-        <h1 className={styles.counter__text}>
+        <div style={{ fontSize }} className={styles.counter__text}>
           {this.state.counter.toLocaleString()}
-        </h1>
-        <div>
-          Trees planted by Ecosia users
         </div>
-      </div>
+        {
+          showText && (
+            <div>
+              Trees planted by Ecosia users
+            </div>
+          )
+        }
+      </div >
     );
   }
 }

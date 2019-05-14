@@ -1,14 +1,18 @@
-import React from 'react';
-import { Button, Intent } from "@blueprintjs/core";
+import React, { useState } from 'react';
+import { Button, Intent, InputGroup, ControlGroup } from "@blueprintjs/core";
 import { IconNames } from "@blueprintjs/icons";
+
+import { Counter, Footer, Links } from '../../components'
 
 import styles from './styles.module.scss';
 import images from './images';
 
 export default () => {
+  const [email, setEmail] = useState('');
+
   return (
     <div className={styles.how_it_works}>
-      <div className={styles.first_screen}>
+      <section className={styles.first_screen}>
         <div className={styles.title}>Plant trees while you search the web</div>
         <div className={styles.separator}>&nbsp;</div>
         <div className={styles.sub_title}>We use the profit we make from your searches to plant trees where they are needed most. <br />Get the free browser extension and plant trees with every search.</div>
@@ -16,11 +20,11 @@ export default () => {
         <div>
           <Button icon={IconNames.ADD} intent={Intent.PRIMARY} large text={'Add Ecosia to Firefox'} />
         </div>
-      </div>
-      <div className={styles.brands}>
+      </section>
+      <section className={styles.brands}>
         {getBrands().map((brand, index) => (<img key={`brand_image_${index}`} className={styles.image} src={brand} alt='tdlr'></img>))}
-      </div>
-      <div className={styles.how_it_works_screen}>
+      </section>
+      <section className={styles.how_it_works_screen}>
         <div className={styles.header}>
           <div className={styles.title}>How it works</div>
         </div>
@@ -32,24 +36,80 @@ export default () => {
             </div>
           ))}
         </div>
-
-      </div>
-      <div className={styles.graphics}>
-        <div className={styles.header}>
-          <div className={styles.title}>Over 57 million trees planted</div>
-        </div>
-        <div className={styles.images}>
-          {getImages().map((item, index) => (
-            <div key={`image_${index}`}>
-              <img className={styles.image} src={item.image} alt='tdlr'></img>
-              <div className={styles.text}>{item.text}</div>
+      </section>
+      <section className={styles.graphics}>
+        <div className={styles.title}>Over 57 million trees planted</div>
+        <div className={styles.column}>
+          {getTimePeriods().map((period, index) => (
+            <div key={`period_${index}`} className={styles.column__item}>
+              <div className={styles.time}>{period.time}</div>
+              <div className={styles.subtitle}>{period.title}</div>
+              <hr className={styles.line} />
+              <div className={styles.time}>{period.content}</div>
             </div>
           ))}
         </div>
-
-      </div>
+      </section>
+      <section className={styles.journey}>
+        <div className={styles.title}>
+          Follow our journey to one billion trees
+        </div>
+        <div className={styles.sub_title}>
+          Subscribe to our newsletter for regular updates, and connect with us on social media.
+        </div>
+        <div>
+          <Footer showText={false} backgroundColor="teal" />
+        </div>
+        <div>
+          <ControlGroup>
+            <InputGroup
+              placeholder="Your e-mail"
+              large
+              onChange={(ev) => { setEmail(ev.target.value); }}
+            />
+            <div className={styles.separator}>&nbsp;</div>
+            <Button intent={Intent.PRIMARY} large text={'Get updates'} onClick={() => alert(email)} />
+          </ControlGroup>
+        </div>
+      </section>
+      <section>
+        <Links />
+      </section>
+      <section>
+        <Footer />
+      </section>
     </div >
   );
+}
+
+function getTimePeriods() {
+  return [
+    {
+      time: 'December 2009',
+      title: '1.1 sec',
+      content: 'to plant a tree'
+    },
+    {
+      time: 'over',
+      title: '7 million',
+      content: 'active users'
+    },
+    {
+      time: 'now',
+      title: <Counter showText={false} fontSize="1em" />,
+      content: 'trees total'
+    },
+    {
+      time: 'over',
+      title: '9,101,152',
+      content: 'EUR invested'
+    },
+    {
+      time: '',
+      title: '0.2 euro',
+      content: 'per tree'
+    },
+  ]
 }
 
 function getBrands() {
