@@ -1,3 +1,106 @@
+@import '../../globals';
+
 .how_it_works {
-  background-color: teal;
+    .title {
+        font-size: 4em;
+    }
+
+    .sub_title {
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+
+    .first_screen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        height: 100vh;
+
+        text-align: center;
+        color: white;
+        background-image: url('./images/background.jpg');
+
+        .separator {
+            padding: 10px;
+        }
+    }
+
+    .brands {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+
+        height: 15vh;
+        background-color: $grey-color;
+
+        .image {
+            max-height: 40px;
+        }
+    }
+
+    .how_it_works_screen {
+        height: 50vh;
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row;
+
+            text-align: center;
+            padding: 50px;
+        }
+
+        .images {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+
+            text-align: center;
+
+            .image {
+                max-width: 10vw;
+            }
+        }
+
+        .text {
+            margin: 0px 2vw;
+        }
+    }
+
+    .graphics {
+        background-color: $grey-color;
+        height: 50vh;
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row;
+
+            text-align: center;
+            padding: 50px;
+        }
+
+        .images {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+
+            text-align: center;
+
+            .image {
+                max-width: 10vw;
+            }
+        }
+
+        .text {
+            margin: 0px 2vw;
+        }
+    }
 }
